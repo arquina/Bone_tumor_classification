@@ -13,7 +13,7 @@ def Parser_main():
     parser = argparse.ArgumentParser(description="Class_project_Xray_classification")
     parser.add_argument("--rootdir" , default = "/home/seob/class_project/School_project/dataset/" , help="dataset rootdir", type = str)
     parser.add_argument("--df_dir", default = "/home/seob/class_project/School_project/dataset/final_5_fold_dataset/", help = "directory which have dataset_csv per fold", type = str)
-    parser.add_argument("--json_file", default = "/home/seob/class_project/School_project/from_shin/Bone_tumor_20220530/via-2.0.11/Bone_Tumor/Bone_tumor_20220530.json", help = "dataset metadata", type = str)
+    parser.add_argument("--json_file", default = "/home/seob/class_project/School_project/dataset/Bone_tumor_20220530.json", help = "dataset metadata", type = str)
     parser.add_argument("--pretrained", action= "store_true", help= "using the pretrained back bone model")
     parser.add_argument("--batch_size", default=8, help="train, test batch_size", type=int)
     parser.add_argument("--epoch", default= 20, help="epoch number", type=int)
@@ -36,8 +36,8 @@ def Parser_main():
     parser.add_argument("--multiview", action = "store_true", help = 'multiview model')
     parser.add_argument("--result", default = "/home/seob/class_project/School_project/result/mask_result/", help = "result save directory", type = str)
     parser.add_argument("--external", action = "store_true", help = "test with external_dataset")
-    parser.add_argument("--external_dir", default = "/home/seob/class_project/School_project/from_shin/external_png", help = "external_data_image_dir", type = str)
-    parser.add_argument("--external_data", default = "/home/seob/class_project/School_project/from_shin/external_validation_set1/external validation set1.xlsx", help = "external_metadata", type = str)
+    parser.add_argument("--external_dir", default = "/home/seob/class_project/School_project/dataset/external_png/", help = "external_data_image_dir", type = str)
+    parser.add_argument("--external_data", default = "/home/seob/class_project/School_project/dataset/external validation set1.xlsx", help = "external_metadata", type = str)
     return parser.parse_args()
 
 def main():
